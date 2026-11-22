@@ -1,7 +1,6 @@
 const jwt = require("jsonwebtoken");
 
-const JWT_SECRET =
-  "This is a secret key for JWT token generation. It should be kept private and secure.";
+const JWT_SECRET = process.env.JWT_SECRET;
 
 
 

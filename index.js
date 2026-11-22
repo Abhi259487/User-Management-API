@@ -3,7 +3,10 @@ const app = express();
 const PORT = 3000;
 const mongoose = require('mongoose');
 const userRoutes = require("./Routes/user.routes.js");
-const DbUrl = "mongodb+srv://abhipaul7525_db_user:AvWSwyI9mbCVrS0J@cluster0.vx2mlvj.mongodb.net/";
+const dotenv = require('dotenv');
+dotenv.config();
+const DbUrl = process.env.DbUrl;
+
 
 mongoose.connect(DbUrl)
   .then(() => console.log('Connected to MongoDB'))
